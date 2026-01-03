@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote Generator</title>
+</head>
+<body>
+    <h1>Random Quote</h1>
+    <p id="quote"></p>
+    <button onclick="showQuote()">New Quote</button>
+    
+    <script>
+    const quotes = [
+        "Build first, understand later.",
+        "Ship ugly, ship fast.",
+        "Done is better than perfect.",
+        "Action beats analysis.",
+        "The first version always sucks."
+    ];
+    
+    function showQuote() {
+        const random = Math.floor(Math.random() * quotes.length);
+        document.getElementById('quote').innerText = quotes[random];
+    }
+    
+    // Show quote on page load
+    showQuote();
+    </script>
+</body>
+</html>
