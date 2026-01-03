@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Picker</title>
+    <style>
+        button { margin: 10px; padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Pick a Color</h1>
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('blue')">Blue</button>
+    <button onclick="changeColor('green')">Green</button>
+    <p id="colorName"></p>
+    
+    <script>
+    function changeColor(color) {
+        document.body.style.backgroundColor = color;
+        document.getElementById('colorName').innerText = 'Current color: ' + color;
+    }
+    </script>
+</body>
+</html>
